@@ -1,0 +1,13 @@
+package com.example.demo.example;
+
+public class Main {	
+	public static void main(String[] args) {
+//		B b = new C();
+//		A a = new A(b);
+		
+		B b = new C();
+		A a = new A(b);
+		a.b.anCom();
+	}
+
+}

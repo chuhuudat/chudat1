@@ -1,0 +1,10 @@
+package com.example.demo.mapper;
+
+import org.apache.ibatis.annotations.Insert;
+
+public interface UserMapper {
+	 @Insert('INSERT INTO BLOG(BLOG_NAME, CREATED_ON) VALUES(#{blogName}, #{createdOn})')
+	
+	
+
+}

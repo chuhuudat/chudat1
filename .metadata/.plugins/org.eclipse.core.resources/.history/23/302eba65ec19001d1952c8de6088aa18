@@ -1,0 +1,9 @@
+package com.example.demo.mapper;
+
+public interface UserMapper {
+	@Insert("Insert into blog(blog_name, created_on) values(#{blogName},#{createOn})");
+	 @Insert('INSERT INTO BLOG(BLOG_NAME, CREATED_ON) VALUES(#{blogName}, #{createdOn})')
+	
+	
+
+}

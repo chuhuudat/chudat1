@@ -1,0 +1,74 @@
+package com.example.demo.service;
+
+import java.util.List;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.Blog;
+import com.example.demo.repository.BlogRepository;
+import com.example.demo.repository.UserMapper;
+
+@Service
+public class BlogServiceImpl implements BlogService {
+	@Autowired
+	private BlogRepository blogRepository;
+	
+	
+
+	public BlogServiceImpl() {
+		super();
+	}
+	
+
+
+	public BlogServiceImpl(BlogRepository blogRepository) {
+		super();
+		this.blogRepository = blogRepository;
+	}
+
+
+
+	@Override
+	public Blog saveBlog(Blog blog) {
+		return blogRepository.insertBlog(blog);
+
+	}
+
+	@Override
+	public List<Blog> getAllBlogs() {
+		return blogRepository.getAllBlogs();
+	}
+
+	@Override
+	public Blog getBlogById(Integer blogID) {
+		Blog blog = blogRepository.getBlogByID(blogID);
+		return blog;
+	}
+
+	@Override
+	public Blog updateBlog(Blog blog, Integer blogID) {
+		Blog blogExist = blogRepository.getBlogByID(blogID);
+		if (blogExist != null) {
+			blogExist.setBlogName(blog.getBlogName());
+			blogExist.setCreateOn(blog.getCreateOn());
+			userMapper.insertBlog(blogExist);
+		} else {
+
+		}
+		return blogExist;
+	}
+
+	@Override
+	public void deleteBlog(Integer blogID) {
+		Blog blog = userMapper.getBlogByID(blogID);
+		if (blog != null) {
+			userMapper.deleteBlog(blogID);
+		} else {
+
+		}
+
+	}
+
+}

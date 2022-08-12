@@ -1,0 +1,59 @@
+package com.example.demo.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.demo.exception.ResourceNotFoundException;
+import com.example.demo.model.Blog;
+import com.example.demo.model.Employee;
+import com.example.demo.repository.UserMapper;
+
+public class BlogServiceImpl implements BlogService {
+	@Autowired
+	private UserMapper userMapper;
+
+	public BlogServiceImpl(UserMapper userMapper) {
+		super();
+		this.userMapper = userMapper;
+	}
+
+	@Override
+	public Blog saveBlog(Blog blog) {
+		return userMapper.insertBlog(blog);
+
+	}
+
+	@Override
+	public List<Blog> getAllBlogs() {
+		return userMapper.getAllBlogs();
+	}
+
+	@Override
+	public Blog getBlogById(Integer blogID) {
+		Blog blog = userMapper.getBlogByID(blogID);
+		return blog;
+	}
+
+	@Override
+	public Blog updateBlog(Blog blog, Integer blogID) {
+		Blog blogExist = userMapper.getBlogByID(blogID);
+		if(blogExist != null)
+		{
+			blogExist.setBlogName(blog.getBlogName());
+			blogExist.setCreateOn(blog.getCreateOn());
+			userMapper.insertBlog(blogExist);
+		}else {
+			
+		}
+		return blogExist;
+	}
+
+	@Override
+	public void deleteBlog(Integer blogID) {
+		
+
+	}
+
+}

@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Wed Aug 03 13:38:09 GMT+07:00 2022
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\chdat\\.m2\\repository\\org\\springframework\\spring-web\\5.0.9.RELEASE\\spring-web-5.0.9.RELEASE.jar=WEB-INF/lib/spring-web-5.0.9.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\chdat\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-websocket\\8.5.34\\tomcat-embed-websocket-8.5.34.jar=WEB-INF/lib/tomcat-embed-websocket-8.5.34.jar

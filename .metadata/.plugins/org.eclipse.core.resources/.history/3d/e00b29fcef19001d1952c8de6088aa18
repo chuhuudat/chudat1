@@ -1,0 +1,44 @@
+package com.example.demo.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.demo.model.Blog;
+import com.example.demo.repository.UserMapper;
+
+public class BlogServiceImpl implements BlogService{
+	@Autowired
+	private  UserMapper userMapper; 
+
+	@Override
+	public Blog saveBlog(Blog blog) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Blog> getAllBlogs() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Blog getBlogById(Integer blogID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Blog updateBlog(Blog blog, Integer blogID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteBlog(Integer blogID) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

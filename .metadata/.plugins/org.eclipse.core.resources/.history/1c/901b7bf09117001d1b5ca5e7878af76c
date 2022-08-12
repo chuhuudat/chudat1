@@ -1,0 +1,11 @@
+package com.example.demo.comsumer;
+
+public class MyDIApplication implements Consumer{
+
+	@Override
+	public void processMessages(String msg, String rec) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

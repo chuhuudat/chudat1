@@ -1,0 +1,14 @@
+package com.example.demo.mapper;
+
+import org.apache.ibatis.annotations.Insert;
+
+import com.example.demo.model.Blog;
+
+public interface UserMapper {
+	 @Insert("INSERT INTO BLOG(BLOG_NAME, CREATED_ON) VALUES(#{blogName}, #{createdOn})")
+	 @Options(useGeneratedKeys=true, keyProperty='blogId')
+	 public void insertBlog(Blog blog);
+	 
+	
+
+}

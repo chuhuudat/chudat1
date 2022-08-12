@@ -1,0 +1,11 @@
+package com.example.demo.example;
+
+public class A {
+	B b;
+
+	public A(B b) {
+		super();
+		this.b = b;
+	}
+	
+}

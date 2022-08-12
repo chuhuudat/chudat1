@@ -1,0 +1,11 @@
+package com.example.demo.vidu;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class College {
+	private College college;
+	public void test() {
+		System.out.println("Test College Method");
+	}
+}
